@@ -22,7 +22,7 @@ class ShortCode extends Model
     public function generateCode()
     {
         if($this->unsuspicious == true) {
-            $code = str_replace("\r\n", "", $this->getRandomWord(3, "-"));
+            $code = $this->getRandomWord(3, "-");
         } else {
             $code = Str::random(6);
         }
@@ -48,7 +48,7 @@ class ShortCode extends Model
             if($i > 0) {
                 $rand_text .= $delimiter;
             }
-            $rand_text .= $file_arr[$rand_index];
+            $rand_text .= preg_replace('~[\r\n]+~', '', $file_arr[$rand_index]);
         }
         return $rand_text;
     }
