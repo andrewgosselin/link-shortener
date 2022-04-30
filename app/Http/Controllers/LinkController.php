@@ -34,6 +34,6 @@ class LinkController extends Controller
         if ($shortCode) {
             return redirect($shortCode->url);
         }
-        return redirect('/not-found');
+        abort(404);
     }
 }
