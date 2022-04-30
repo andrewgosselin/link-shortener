@@ -32,6 +32,13 @@ class LinkController extends Controller
     public function resolveCode($code) {
         $shortCode = ShortCode::where('code', $code)->first();
         if ($shortCode) {
+            if(!$shortCode->unsuspicious) {
+                return redirect($shortCode->url);
+            } else {
+                return view('pages.short-code.resolve-unsuspicious', [
+                    'url' => $shortCode->url,
+                ]);
+            }
             return redirect($shortCode->url);
         }
         abort(404);
