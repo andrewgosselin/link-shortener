@@ -102,6 +102,27 @@ html, body {
     width: 100%;
     height: 100%;
 }
+.credits {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    color: black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    font-size: 10pt;
+    z-index: 99;
+}
+.credits a {
+    color: black;
+}
     </style>
     @yield("styles")
 
@@ -110,6 +131,9 @@ html, body {
 <body class="d-flex h-100 text-center text-white bg-dark">
 
     @yield("content")
+    <div class="credits" style="margin-right: 150px;">
+        <a href="https://github.com/andrewgosselin/cyrexag.com" target="_blank">View source on Github</a>
+    </div>
 
     <script>
     $.ajaxSetup({
