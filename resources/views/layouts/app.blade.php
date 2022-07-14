@@ -119,6 +119,7 @@ html, body {
     border-top-left-radius: 12px;
     font-size: 10pt;
     z-index: 99;
+    text-decoration: none;
 }
 .credits a {
     color: black;
@@ -132,7 +133,7 @@ html, body {
 
     @yield("content")
     <div class="credits" style="margin-right: 150px;">
-        <a href="https://github.com/andrewgosselin/cyrexag.com" target="_blank">View source on Github</a>
+        <a href="https://github.com/andrewgosselin/link-shortener" target="_blank">View source on Github</a>
     </div>
 
     <script>
