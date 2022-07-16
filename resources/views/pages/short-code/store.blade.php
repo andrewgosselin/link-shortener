@@ -51,7 +51,7 @@
             <div class="form-check mb-3" style="padding-left: 175px; padding-right: 175px;">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
-                    Create an readable URL
+                    Create a readable URL
                 </label>
             </div>
             <p class="lead">
